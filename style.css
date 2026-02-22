@@ -1,0 +1,39 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #08101f;
+  overflow: hidden;
+}
+
+#game {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  cursor: crosshair;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 0.5rem;
+  color: #e8f2ff;
+  background: radial-gradient(circle at center, rgba(20, 40, 75, 0.35), rgba(4, 9, 17, 0.8));
+  transition: opacity 200ms ease;
+  pointer-events: none;
+}
+
+.overlay.hidden {
+  opacity: 0;
+}
+
+h1 { margin: 0; font-size: 2rem; }
+p { margin: 0; color: #c9dbff; }
